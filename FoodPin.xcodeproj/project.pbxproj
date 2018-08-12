@@ -12,6 +12,8 @@
 		C11ED66420F2B30C001E1EBE /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ED66320F2B30C001E1EBE /* RestaurantDetailMapCell.swift */; };
 		C11ED66620F2D7FF001E1EBE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ED66520F2D7FF001E1EBE /* MapViewController.swift */; };
 		C11ED66820F2FF9E001E1EBE /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ED66720F2FF9D001E1EBE /* ReviewViewController.swift */; };
+		C1223CFF2120CA25001FD58E /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1223CFD2120CA25001FD58E /* About.storyboard */; };
+		C1223D012120CA84001FD58E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1223D002120CA84001FD58E /* Discover.storyboard */; };
 		C13BD86320F96EF90050C185 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13BD86220F96EF90050C185 /* RoundedTextField.swift */; };
 		C13BD86520F972890050C185 /* NewRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13BD86420F972890050C185 /* NewRestaurantTableViewController.swift */; };
 		C13D578D20ED3B6D00C86595 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13D578C20ED3B6D00C86595 /* RestaurantDetailViewController.swift */; };
@@ -51,6 +53,8 @@
 		C11ED66320F2B30C001E1EBE /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		C11ED66520F2D7FF001E1EBE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C11ED66720F2FF9D001E1EBE /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
+		C1223CFE2120CA25001FD58E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		C1223D002120CA84001FD58E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		C13BD86220F96EF90050C185 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		C13BD86420F972890050C185 /* NewRestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantTableViewController.swift; sourceTree = "<group>"; };
 		C13D578C20ED3B6D00C86595 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				C1620DDE20E804C400BA72B0 /* Main.storyboard */,
 				C1620DE320E804C500BA72B0 /* LaunchScreen.storyboard */,
 				C19D916F211D1C75002BBCE1 /* Onboarding.storyboard */,
+				C1223D002120CA84001FD58E /* Discover.storyboard */,
+				C1223CFD2120CA25001FD58E /* About.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -287,11 +293,13 @@
 			files = (
 				C14B7DCC20F16CB300CC1B60 /* Rubik-Bold.ttf in Resources */,
 				C14B7DCB20F16CB300CC1B60 /* OFL.txt in Resources */,
+				C1223CFF2120CA25001FD58E /* About.storyboard in Resources */,
 				C1620DE520E804C500BA72B0 /* LaunchScreen.storyboard in Resources */,
 				C14B7DC620F16CB300CC1B60 /* Rubik-Italic.ttf in Resources */,
 				C14B7DC920F16CB300CC1B60 /* Rubik-Black.ttf in Resources */,
 				C14B7DCF20F16CB300CC1B60 /* Rubik-BoldItalic.ttf in Resources */,
 				C19D9170211D1C75002BBCE1 /* Onboarding.storyboard in Resources */,
+				C1223D012120CA84001FD58E /* Discover.storyboard in Resources */,
 				C14B7DC720F16CB300CC1B60 /* Rubik-BlackItalic.ttf in Resources */,
 				C14B7DCA20F16CB300CC1B60 /* Rubik-Light.ttf in Resources */,
 				C14B7DC520F16CB300CC1B60 /* Rubik-Regular.ttf in Resources */,
@@ -336,6 +344,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C1223CFD2120CA25001FD58E /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1223CFE2120CA25001FD58E /* Base */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
 		C1620DDE20E804C400BA72B0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
