@@ -45,6 +45,10 @@
 		C19F868320F284D0001AFC01 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F868220F284D0001AFC01 /* UIColorExtension.swift */; };
 		C19F868520F28712001AFC01 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F868420F28712001AFC01 /* UINavigationControllerExtension.swift */; };
 		C1B53D492115542000DA8778 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B53D472115542000DA8778 /* FoodPin.xcdatamodeld */; };
+		C1EDC3332120E772006A8B12 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC3322120E772006A8B12 /* AboutTableViewController.swift */; };
+		C1EDC33521210347006A8B12 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC33421210347006A8B12 /* WebViewController.swift */; };
+		C1EDC33821226589006A8B12 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDC33721226589006A8B12 /* CloudKit.framework */; };
+		C1EDC33A2123B42F006A8B12 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC3392123B42F006A8B12 /* DiscoverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +92,11 @@
 		C19F868220F284D0001AFC01 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C19F868420F28712001AFC01 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		C1B53D482115542000DA8778 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		C1EDC3322120E772006A8B12 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
+		C1EDC33421210347006A8B12 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		C1EDC33621226585006A8B12 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
+		C1EDC33721226589006A8B12 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C1EDC3392123B42F006A8B12 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11ED66020F2AE4E001E1EBE /* MapKit.framework in Frameworks */,
+				C1EDC33821226589006A8B12 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +115,7 @@
 		C11ED65E20F2AE4E001E1EBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDC33721226589006A8B12 /* CloudKit.framework */,
 				C11ED65F20F2AE4E001E1EBE /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -121,6 +132,9 @@
 				C19D9171211D27C7002BBCE1 /* WalkThroughContentViewController.swift */,
 				C19D9173211D2BAA002BBCE1 /* WalkThroughPageViewController.swift */,
 				C19D9175211D3634002BBCE1 /* WalkThroughViewController.swift */,
+				C1EDC3322120E772006A8B12 /* AboutTableViewController.swift */,
+				C1EDC33421210347006A8B12 /* WebViewController.swift */,
+				C1EDC3392123B42F006A8B12 /* DiscoverTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +219,7 @@
 		C1620DD920E804C400BA72B0 /* FoodPin */ = {
 			isa = PBXGroup;
 			children = (
+				C1EDC33621226585006A8B12 /* FoodPin.entitlements */,
 				C19F868120F283AE001AFC01 /* Extension */,
 				C14B7DB420F1686300CC1B60 /* Controller */,
 				C14B7DB620F1687300CC1B60 /* Model */,
@@ -264,6 +279,12 @@
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 				};
@@ -318,7 +339,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1EDC33A2123B42F006A8B12 /* DiscoverTableViewController.swift in Sources */,
 				C14B7DD120F171DB00CC1B60 /* RestaurantDetailHeaderView.swift in Sources */,
+				C1EDC33521210347006A8B12 /* WebViewController.swift in Sources */,
 				C13D578F20ED448700C86595 /* Restaurant.swift in Sources */,
 				C11ED66820F2FF9E001E1EBE /* ReviewViewController.swift in Sources */,
 				C11ED66420F2B30C001E1EBE /* RestaurantDetailMapCell.swift in Sources */,
@@ -329,6 +352,7 @@
 				C19D9172211D27C7002BBCE1 /* WalkThroughContentViewController.swift in Sources */,
 				C1B53D492115542000DA8778 /* FoodPin.xcdatamodeld in Sources */,
 				C11ED66620F2D7FF001E1EBE /* MapViewController.swift in Sources */,
+				C1EDC3332120E772006A8B12 /* AboutTableViewController.swift in Sources */,
 				C19F868520F28712001AFC01 /* UINavigationControllerExtension.swift in Sources */,
 				C19F868320F284D0001AFC01 /* UIColorExtension.swift in Sources */,
 				C14B7DD320F1878700CC1B60 /* RestaurantDetailIconTextCell.swift in Sources */,
@@ -489,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T6NR59NT7;
 				INFOPLIST_FILE = FoodPin/Info.plist;
@@ -508,6 +533,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T6NR59NT7;
 				INFOPLIST_FILE = FoodPin/Info.plist;
