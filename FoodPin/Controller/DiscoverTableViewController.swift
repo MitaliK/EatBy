@@ -15,6 +15,9 @@ class DiscoverTableViewController: UITableViewController {
     var restaurants: [CKRecord] = []
     var spinner = UIActivityIndicatorView()
     
+    // Cache
+    private var imageCache = NSCache<CKRecord.ID, NSURL>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,6 +51,12 @@ class DiscoverTableViewController: UITableViewController {
         
         // Activate the spinner
         spinner.startAnimating()
+        
+        // pull to refresh
+        refreshControl = UIRefreshControl()
+        refreshControl?.backgroundColor = UIColor.white
+        refreshControl?.tintColor = UIColor.gray
+        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControl.Event.valueChanged)
     }
     
     // MARK: - Helper Function
@@ -77,7 +86,7 @@ class DiscoverTableViewController: UITableViewController {
         }
     } */
     
-    func fetchRecordsFromCloud() {
+    @objc func fetchRecordsFromCloud() {
         
         // Fetching data using Convenience API
         let cloudContainer = CKContainer.default()
@@ -90,7 +99,7 @@ class DiscoverTableViewController: UITableViewController {
         
         // Create query operation with the query
         let queryOperation = CKQueryOperation(query: query)
-        queryOperation.desiredKeys = ["name","image"]
+        queryOperation.desiredKeys = ["name"]
         queryOperation.queuePriority = .veryHigh
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = {(record) -> Void in
@@ -105,7 +114,15 @@ class DiscoverTableViewController: UITableViewController {
             print("Successfully retreived data from iCloud")
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
+                // Remove existing items before refreshing
+                self.restaurants.removeAll()
                 self.tableView.reloadData()
+                // To remove the refreshController
+                if let refreshControl = self.refreshControl {
+                    if refreshControl.isRefreshing {
+                        refreshControl.endRefreshing()
+                    }
+                }
             }
         }
         
@@ -131,10 +148,42 @@ class DiscoverTableViewController: UITableViewController {
         let restaurant = self.restaurants[indexPath.row]
         cell.textLabel?.text = restaurant.object(forKey: "name") as? String
         
-        if let image = restaurant.object(forKey: "image"), let imageAsset = image as? CKAsset {
-            if let imageData = try? Data.init(contentsOf: imageAsset.fileURL) {
+        // Set default image
+        cell.imageView?.image = UIImage(named: "photo")
+        
+        // Check if the image is stored in the cache
+        if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
+            // Fetch the image from cache
+            print("Get Image from Cache")
+            if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
                 cell.imageView?.image = UIImage(data: imageData)
             }
+        } else {
+            // Fetch Image from Cloud in background
+            let publicDatabase = CKContainer.default().publicCloudDatabase
+            let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
+            fetchRecordsImageOperation.desiredKeys = ["image"]
+            fetchRecordsImageOperation.queuePriority = .veryHigh
+            fetchRecordsImageOperation.perRecordCompletionBlock = {(record, recordID, error) -> Void in
+                if let error = error {
+                    print("Failed to get restaurant Images: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let restaurantRecord = record, let image = restaurantRecord.object(forKey: "image"), let imageAsset = image as? CKAsset {
+                    if let imageData = try? Data.init(contentsOf: imageAsset.fileURL) {
+                        // Replace the plcaeholder image with restaurant image
+                        DispatchQueue.main.async {
+                            cell.imageView?.image = UIImage(data: imageData)
+                            cell.setNeedsLayout()
+                        }
+                        
+                        // Add image URL to cache
+                        self.imageCache.setObject(imageAsset.fileURL as NSURL, forKey: restaurant.recordID)
+                    }
+                }
+            }
+            publicDatabase.add(fetchRecordsImageOperation)
         }
         return cell
     }
