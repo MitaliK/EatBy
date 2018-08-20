@@ -13,7 +13,6 @@
 		C11ED66620F2D7FF001E1EBE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ED66520F2D7FF001E1EBE /* MapViewController.swift */; };
 		C11ED66820F2FF9E001E1EBE /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11ED66720F2FF9D001E1EBE /* ReviewViewController.swift */; };
 		C1223CFF2120CA25001FD58E /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1223CFD2120CA25001FD58E /* About.storyboard */; };
-		C1223D012120CA84001FD58E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1223D002120CA84001FD58E /* Discover.storyboard */; };
 		C1387D45212A23FC00161376 /* DiscoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1387D44212A23FC00161376 /* DiscoverTableViewCell.swift */; };
 		C13BD86320F96EF90050C185 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13BD86220F96EF90050C185 /* RoundedTextField.swift */; };
 		C13BD86520F972890050C185 /* NewRestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13BD86420F972890050C185 /* NewRestaurantTableViewController.swift */; };
@@ -39,7 +38,8 @@
 		C1620DE520E804C500BA72B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1620DE320E804C500BA72B0 /* LaunchScreen.storyboard */; };
 		C1620DED20E8054900BA72B0 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1620DEC20E8054900BA72B0 /* RestaurantTableViewController.swift */; };
 		C1620DEF20E80BA900BA72B0 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1620DEE20E80BA900BA72B0 /* RestaurantTableViewCell.swift */; };
-		C19D9170211D1C75002BBCE1 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C19D916F211D1C75002BBCE1 /* Onboarding.storyboard */; };
+		C1684449212A5DF20072CCD8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168444B212A5DF20072CCD8 /* Onboarding.storyboard */; };
+		C1684450212A5E060072CCD8 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1684452212A5E060072CCD8 /* Discover.storyboard */; };
 		C19D9172211D27C7002BBCE1 /* WalkThroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D9171211D27C7002BBCE1 /* WalkThroughContentViewController.swift */; };
 		C19D9174211D2BAA002BBCE1 /* WalkThroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D9173211D2BAA002BBCE1 /* WalkThroughPageViewController.swift */; };
 		C19D9176211D3634002BBCE1 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D9175211D3634002BBCE1 /* WalkThroughViewController.swift */; };
@@ -59,7 +59,6 @@
 		C11ED66520F2D7FF001E1EBE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C11ED66720F2FF9D001E1EBE /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		C1223CFE2120CA25001FD58E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
-		C1223D002120CA84001FD58E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		C1387D44212A23FC00161376 /* DiscoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewCell.swift; sourceTree = "<group>"; };
 		C13BD86220F96EF90050C185 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		C13BD86420F972890050C185 /* NewRestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantTableViewController.swift; sourceTree = "<group>"; };
@@ -87,7 +86,8 @@
 		C1620DE620E804C500BA72B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1620DEC20E8054900BA72B0 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		C1620DEE20E80BA900BA72B0 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
-		C19D916F211D1C75002BBCE1 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		C168444A212A5DF20072CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
+		C1684451212A5E060072CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		C19D9171211D27C7002BBCE1 /* WalkThroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentViewController.swift; sourceTree = "<group>"; };
 		C19D9173211D2BAA002BBCE1 /* WalkThroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughPageViewController.swift; sourceTree = "<group>"; };
 		C19D9175211D3634002BBCE1 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 			children = (
 				C1620DDE20E804C400BA72B0 /* Main.storyboard */,
 				C1620DE320E804C500BA72B0 /* LaunchScreen.storyboard */,
-				C19D916F211D1C75002BBCE1 /* Onboarding.storyboard */,
-				C1223D002120CA84001FD58E /* Discover.storyboard */,
+				C168444B212A5DF20072CCD8 /* Onboarding.storyboard */,
+				C1684452212A5E060072CCD8 /* Discover.storyboard */,
 				C1223CFD2120CA25001FD58E /* About.storyboard */,
 			);
 			path = Storyboard;
@@ -322,8 +322,8 @@
 				C14B7DC620F16CB300CC1B60 /* Rubik-Italic.ttf in Resources */,
 				C14B7DC920F16CB300CC1B60 /* Rubik-Black.ttf in Resources */,
 				C14B7DCF20F16CB300CC1B60 /* Rubik-BoldItalic.ttf in Resources */,
-				C19D9170211D1C75002BBCE1 /* Onboarding.storyboard in Resources */,
-				C1223D012120CA84001FD58E /* Discover.storyboard in Resources */,
+				C1684449212A5DF20072CCD8 /* Onboarding.storyboard in Resources */,
+				C1684450212A5E060072CCD8 /* Discover.storyboard in Resources */,
 				C14B7DC720F16CB300CC1B60 /* Rubik-BlackItalic.ttf in Resources */,
 				C14B7DCA20F16CB300CC1B60 /* Rubik-Light.ttf in Resources */,
 				C14B7DC520F16CB300CC1B60 /* Rubik-Regular.ttf in Resources */,
@@ -394,6 +394,22 @@
 				C1620DE420E804C500BA72B0 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C168444B212A5DF20072CCD8 /* Onboarding.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C168444A212A5DF20072CCD8 /* Base */,
+			);
+			name = Onboarding.storyboard;
+			sourceTree = "<group>";
+		};
+		C1684452212A5E060072CCD8 /* Discover.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C1684451212A5E060072CCD8 /* Base */,
+			);
+			name = Discover.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

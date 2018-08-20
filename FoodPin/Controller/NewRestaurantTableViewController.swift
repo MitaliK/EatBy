@@ -80,8 +80,8 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
-            let cameraAction = UIAlertAction(title: "Camera", style: .default) { (action) in
+            let photoSourceRequestController = UIAlertController(title: "", message: NSLocalizedString("Choose your photo source", comment: "Choose your photo source"), preferredStyle: .actionSheet)
+            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera"), style: .default) { (action) in
                 
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
@@ -92,7 +92,7 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
                 }
             }
             
-            let photoAction = UIAlertAction(title: "Photo Library", style: .default) { (action) in
+            let photoAction = UIAlertAction(title: NSLocalizedString("Photo Library", comment: "Photo Library"), style: .default) { (action) in
                 
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()
@@ -142,8 +142,8 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
     // MARK: - Save button pressed
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
         if nameTextField.text == "" || typeTextField.text == "" || phoneTextField.text == "" || addressTextField.text == "" || descriptionTextView.text == "" {
-            let alertController = UIAlertController(title: "Oops", message: "We can't proceed because the field is blank. All the fields are required.", preferredStyle: .alert)
-            let alertAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let alertController = UIAlertController(title: NSLocalizedString("Oops", comment: "Oops"), message: NSLocalizedString("We can't proceed because the field is blank. All the fields are required.", comment: "We can't proceed because the field is blank. All the fields are required."), preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: nil)
             alertController.addAction(alertAction)
             present(alertController, animated: true, completion: nil)
             return

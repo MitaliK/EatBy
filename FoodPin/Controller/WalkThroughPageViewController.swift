@@ -16,11 +16,11 @@ protocol WalkThroughPageViewControllerDelegate: class {
 class WalkThroughPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     // MARK: - Properties
-    var pageHeadings = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
+    var pageHeadings = [NSLocalizedString("CREATE YOUR OWN FOOD GUIDE", comment: "CREATE YOUR OWN FOOD GUIDE"), NSLocalizedString("SHOW YOU THE LOCATION", comment: "SHOW YOU THE LOCATION"), NSLocalizedString("DISCOVER GREAT RESTAURANTS", comment: "DISCOVER GREAT RESTAURANTS")]
     var pageImages = ["onboarding-1", "onboarding-2", "onboarding-3"]
-    var pageSubHeadings = ["Pin your favorite restaurants and create your own food guide",
-                           "Search and locate your favourite restaurant on Maps",
-                           "Find restaurants shared by your friends and other foodies"]
+    var pageSubHeadings = [NSLocalizedString("Pin your favorite restaurants and create your own food guide", comment: "Pin your favorite restaurants and create your own food guide"),
+                           NSLocalizedString("Search and locate your favourite restaurant on Maps", comment: "Search and locate your favourite restaurant on Maps"),
+                           NSLocalizedString("Find restaurants shared by your friends and other foodies", comment: "Find restaurants shared by your friends and other foodies")]
     var currentIndex = 0
     weak var walkThroughDelegate: WalkThroughPageViewControllerDelegate?
     
