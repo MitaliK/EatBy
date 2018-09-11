@@ -12,12 +12,8 @@ import SafariServices
 class AboutTableViewController: UITableViewController {
     
     // MARK: - Properties
-    var sectionTitles = [NSLocalizedString("Feedback", comment: "Feedback"), NSLocalizedString("Follow Us", comment: "Follow Us")]
-    var sectionContent = [[(image: "store", text: NSLocalizedString("Rate us on App Store", comment: "Rate us on App Store"), link: "https://www.apple.com/itunes/charts/paid-apps/"),
-    (image: "chat", text: NSLocalizedString("Tell us your feedback", comment: "Tell us your feedback"), link: "http://www.appcoda.com/contact")],
-    [(image: "twitter", text: NSLocalizedString("Twitter", comment: "Twitter"), link: "https://twitter.com/appcodamobile"),
-    (image: "facebook", text: NSLocalizedString("Facebook", comment: "Facebook"), link: "https://facebook.com/appcodamobile"),
-    (image: "instagram", text: NSLocalizedString("Instagram", comment: "Instagram"), link: "https://www.instagram.com/appcodadotcom")]]
+    var sectionTitles = [NSLocalizedString("Feedback", comment: "Feedback")]
+    var sectionContent = [[(image: "store", text: NSLocalizedString("Rate us on App Store", comment: "Rate us on App Store"), link: "https://www.apple.com/itunes/charts/paid-apps/")]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,15 +76,8 @@ class AboutTableViewController: UITableViewController {
                 if let url = URL(string: link) {
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
-            } else if indexPath.row == 1 {
-                performSegue(withIdentifier: "showWebView", sender: self)
             }
             // Follow us section
-        case 1:
-            if let url = URL(string: link) {
-                let safariController = SFSafariViewController(url: url)
-                present(safariController, animated: true, completion: nil)
-            }
         default:
             break
         }
@@ -99,12 +88,6 @@ class AboutTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        if segue.identifier == "showWebView" {
-            if let destinationController = segue.destination as? WebViewController, let indexPath = tableView.indexPathForSelectedRow {
-                destinationController.target = sectionContent[indexPath.section][indexPath.row].link
-            }
-        }
+        
     }
 }

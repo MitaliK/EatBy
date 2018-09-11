@@ -38,6 +38,7 @@
 		C1620DE520E804C500BA72B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1620DE320E804C500BA72B0 /* LaunchScreen.storyboard */; };
 		C1620DED20E8054900BA72B0 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1620DEC20E8054900BA72B0 /* RestaurantTableViewController.swift */; };
 		C1620DEF20E80BA900BA72B0 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1620DEE20E80BA900BA72B0 /* RestaurantTableViewCell.swift */; };
+		C165FBAF2148120500633796 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C165FBAE2148120500633796 /* CloudKit.framework */; };
 		C1684449212A5DF20072CCD8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C168444B212A5DF20072CCD8 /* Onboarding.storyboard */; };
 		C1684450212A5E060072CCD8 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1684452212A5E060072CCD8 /* Discover.storyboard */; };
 		C19D9172211D27C7002BBCE1 /* WalkThroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D9171211D27C7002BBCE1 /* WalkThroughContentViewController.swift */; };
@@ -45,10 +46,9 @@
 		C19D9176211D3634002BBCE1 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19D9175211D3634002BBCE1 /* WalkThroughViewController.swift */; };
 		C19F868320F284D0001AFC01 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F868220F284D0001AFC01 /* UIColorExtension.swift */; };
 		C19F868520F28712001AFC01 /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19F868420F28712001AFC01 /* UINavigationControllerExtension.swift */; };
-		C1B53D492115542000DA8778 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B53D472115542000DA8778 /* FoodPin.xcdatamodeld */; };
+		C1B681BB2148762400407917 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C1B681B92148762400407917 /* Model.xcdatamodeld */; };
 		C1EDC3332120E772006A8B12 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC3322120E772006A8B12 /* AboutTableViewController.swift */; };
 		C1EDC33521210347006A8B12 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC33421210347006A8B12 /* WebViewController.swift */; };
-		C1EDC33821226589006A8B12 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1EDC33721226589006A8B12 /* CloudKit.framework */; };
 		C1EDC33A2123B42F006A8B12 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EDC3392123B42F006A8B12 /* DiscoverTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +78,7 @@
 		C14B7DD020F171DB00CC1B60 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
 		C14B7DD220F1878700CC1B60 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		C14B7DD420F1893200CC1B60 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
-		C1620DD720E804C400BA72B0 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1620DD720E804C400BA72B0 /* EatBy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EatBy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1620DDA20E804C400BA72B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C1620DDF20E804C400BA72B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C1620DE120E804C500BA72B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 		C1620DE620E804C500BA72B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1620DEC20E8054900BA72B0 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		C1620DEE20E80BA900BA72B0 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		C165FBAE2148120500633796 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C168444A212A5DF20072CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		C1684451212A5E060072CCD8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Discover.storyboard; sourceTree = "<group>"; };
 		C19D9171211D27C7002BBCE1 /* WalkThroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughContentViewController.swift; sourceTree = "<group>"; };
@@ -93,11 +94,10 @@
 		C19D9175211D3634002BBCE1 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		C19F868220F284D0001AFC01 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C19F868420F28712001AFC01 /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
-		C1B53D482115542000DA8778 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		C1B681BA2148762400407917 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C1EDC3322120E772006A8B12 /* AboutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableViewController.swift; sourceTree = "<group>"; };
 		C1EDC33421210347006A8B12 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		C1EDC33621226585006A8B12 /* FoodPin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodPin.entitlements; sourceTree = "<group>"; };
-		C1EDC33721226589006A8B12 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C1EDC33621226585006A8B12 /* EatBy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EatBy.entitlements; sourceTree = "<group>"; };
 		C1EDC3392123B42F006A8B12 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C11ED66020F2AE4E001E1EBE /* MapKit.framework in Frameworks */,
-				C1EDC33821226589006A8B12 /* CloudKit.framework in Frameworks */,
+				C165FBAF2148120500633796 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,7 +117,7 @@
 		C11ED65E20F2AE4E001E1EBE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C1EDC33721226589006A8B12 /* CloudKit.framework */,
+				C165FBAE2148120500633796 /* CloudKit.framework */,
 				C11ED65F20F2AE4E001E1EBE /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -205,7 +205,8 @@
 		C1620DCE20E804C400BA72B0 = {
 			isa = PBXGroup;
 			children = (
-				C1620DD920E804C400BA72B0 /* FoodPin */,
+				C1B681B92148762400407917 /* Model.xcdatamodeld */,
+				C1620DD920E804C400BA72B0 /* EatBy */,
 				C1620DD820E804C400BA72B0 /* Products */,
 				C11ED65E20F2AE4E001E1EBE /* Frameworks */,
 			);
@@ -214,15 +215,15 @@
 		C1620DD820E804C400BA72B0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C1620DD720E804C400BA72B0 /* FoodPin.app */,
+				C1620DD720E804C400BA72B0 /* EatBy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C1620DD920E804C400BA72B0 /* FoodPin */ = {
+		C1620DD920E804C400BA72B0 /* EatBy */ = {
 			isa = PBXGroup;
 			children = (
-				C1EDC33621226585006A8B12 /* FoodPin.entitlements */,
+				C1EDC33621226585006A8B12 /* EatBy.entitlements */,
 				C19F868120F283AE001AFC01 /* Extension */,
 				C14B7DB420F1686300CC1B60 /* Controller */,
 				C14B7DB620F1687300CC1B60 /* Model */,
@@ -232,9 +233,8 @@
 				C1620DE120E804C500BA72B0 /* Assets.xcassets */,
 				C1620DE620E804C500BA72B0 /* Info.plist */,
 				C1620DDA20E804C400BA72B0 /* AppDelegate.swift */,
-				C1B53D472115542000DA8778 /* FoodPin.xcdatamodeld */,
 			);
-			path = FoodPin;
+			path = EatBy;
 			sourceTree = "<group>";
 		};
 		C19F868120F283AE001AFC01 /* Extension */ = {
@@ -249,9 +249,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C1620DD620E804C400BA72B0 /* FoodPin */ = {
+		C1620DD620E804C400BA72B0 /* EatBy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1620DE920E804C500BA72B0 /* Build configuration list for PBXNativeTarget "FoodPin" */;
+			buildConfigurationList = C1620DE920E804C500BA72B0 /* Build configuration list for PBXNativeTarget "EatBy" */;
 			buildPhases = (
 				C1620DD320E804C400BA72B0 /* Sources */,
 				C1620DD420E804C400BA72B0 /* Frameworks */,
@@ -261,9 +261,9 @@
 			);
 			dependencies = (
 			);
-			name = FoodPin;
+			name = EatBy;
 			productName = FoodPin;
-			productReference = C1620DD720E804C400BA72B0 /* FoodPin.app */;
+			productReference = C1620DD720E804C400BA72B0 /* EatBy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -292,7 +292,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C1620DD220E804C400BA72B0 /* Build configuration list for PBXProject "FoodPin" */;
+			buildConfigurationList = C1620DD220E804C400BA72B0 /* Build configuration list for PBXProject "EatBy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -305,7 +305,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C1620DD620E804C400BA72B0 /* FoodPin */,
+				C1620DD620E804C400BA72B0 /* EatBy */,
 			);
 		};
 /* End PBXProject section */
@@ -353,8 +353,8 @@
 				C1387D45212A23FC00161376 /* DiscoverTableViewCell.swift in Sources */,
 				C1620DED20E8054900BA72B0 /* RestaurantTableViewController.swift in Sources */,
 				C1620DEF20E80BA900BA72B0 /* RestaurantTableViewCell.swift in Sources */,
+				C1B681BB2148762400407917 /* Model.xcdatamodeld in Sources */,
 				C19D9172211D27C7002BBCE1 /* WalkThroughContentViewController.swift in Sources */,
-				C1B53D492115542000DA8778 /* FoodPin.xcdatamodeld in Sources */,
 				C11ED66620F2D7FF001E1EBE /* MapViewController.swift in Sources */,
 				C1EDC3332120E772006A8B12 /* AboutTableViewController.swift in Sources */,
 				C19F868520F28712001AFC01 /* UINavigationControllerExtension.swift in Sources */,
@@ -533,16 +533,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EatBy/EatBy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T6NR59NT7;
-				INFOPLIST_FILE = FoodPin/Info.plist;
+				INFOPLIST_FILE = EatBy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = example.mitali.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = example.mitali.EatBy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,16 +553,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = FoodPin/FoodPin.entitlements;
+				CODE_SIGN_ENTITLEMENTS = EatBy/EatBy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4T6NR59NT7;
-				INFOPLIST_FILE = FoodPin/Info.plist;
+				INFOPLIST_FILE = EatBy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = example.mitali.FoodPin;
+				PRODUCT_BUNDLE_IDENTIFIER = example.mitali.EatBy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,7 +572,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C1620DD220E804C400BA72B0 /* Build configuration list for PBXProject "FoodPin" */ = {
+		C1620DD220E804C400BA72B0 /* Build configuration list for PBXProject "EatBy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1620DE720E804C500BA72B0 /* Debug */,
@@ -581,7 +581,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1620DE920E804C500BA72B0 /* Build configuration list for PBXNativeTarget "FoodPin" */ = {
+		C1620DE920E804C500BA72B0 /* Build configuration list for PBXNativeTarget "EatBy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C1620DEA20E804C500BA72B0 /* Debug */,
@@ -593,13 +593,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		C1B53D472115542000DA8778 /* FoodPin.xcdatamodeld */ = {
+		C1B681B92148762400407917 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				C1B53D482115542000DA8778 /* FoodPin.xcdatamodel */,
+				C1B681BA2148762400407917 /* Model.xcdatamodel */,
 			);
-			currentVersion = C1B53D482115542000DA8778 /* FoodPin.xcdatamodel */;
-			path = FoodPin.xcdatamodeld;
+			currentVersion = C1B681BA2148762400407917 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

@@ -60,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          The persistent container for your application.
          This creates and returns a container for your application, having  loaded the store for the application
          */
-        let container = NSPersistentContainer(name: "FoodPin")
+        let container = NSPersistentContainer(name: "Model")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error : \(error)")
