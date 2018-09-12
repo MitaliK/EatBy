@@ -18,9 +18,21 @@ class RestaurantTableViewCell: UITableViewCell {
         }
     }
     
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var locationType: UILabel!
-    @IBOutlet weak var typeLocation: UILabel!
+    @IBOutlet weak var nameLabel: UILabel! {
+        didSet {
+            nameLabel.numberOfLines = 0
+        }
+    }
+    @IBOutlet weak var locationType: UILabel!  {
+        didSet {
+            locationType.numberOfLines = 0
+        }
+    }
+    @IBOutlet weak var typeLocation: UILabel!  {
+        didSet {
+            typeLocation.numberOfLines = 0
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

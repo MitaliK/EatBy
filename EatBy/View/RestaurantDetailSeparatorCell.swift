@@ -13,7 +13,6 @@ class RestaurantDetailSeparatorCell: UITableViewCell {
     // MARK: - Properties
     @IBOutlet weak var titleLable: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,5 +23,4 @@ class RestaurantDetailSeparatorCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }
