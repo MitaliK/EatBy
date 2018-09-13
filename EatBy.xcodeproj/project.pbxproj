@@ -205,7 +205,6 @@
 		C1620DCE20E804C400BA72B0 = {
 			isa = PBXGroup;
 			children = (
-				C1B681B92148762400407917 /* Model.xcdatamodeld */,
 				C1620DD920E804C400BA72B0 /* EatBy */,
 				C1620DD820E804C400BA72B0 /* Products */,
 				C11ED65E20F2AE4E001E1EBE /* Frameworks */,
@@ -233,6 +232,7 @@
 				C1620DE120E804C500BA72B0 /* Assets.xcassets */,
 				C1620DE620E804C500BA72B0 /* Info.plist */,
 				C1620DDA20E804C400BA72B0 /* AppDelegate.swift */,
+				C1B681B92148762400407917 /* Model.xcdatamodeld */,
 			);
 			path = EatBy;
 			sourceTree = "<group>";
