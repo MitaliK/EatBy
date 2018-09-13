@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Food Pin-->
+        <!--EatBy-->
         <scene sceneID="JJx-9C-tX7">
             <objects>
                 <tableViewController id="a2w-KJ-EfO" customClass="RestaurantTableViewController" customModule="EatBy" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="a2w-KJ-EfO" id="VPl-mk-NBU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Food Pin" id="LZY-E5-8Sc">
+                    <navigationItem key="navigationItem" title="EatBy" id="LZY-E5-8Sc">
                         <barButtonItem key="backBarButtonItem" title=" " id="8yN-nx-Gjo"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" id="Agi-BB-q3B">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
