@@ -89,7 +89,6 @@ class DiscoverTableViewController: UITableViewController {
         // Check if the image is stored in cache
         if let imageFileURL = imageCache.object(forKey: restaurant.recordID) {
             // Fetch image from cache
-            print("Get image from cache")
             if let imageData = try? Data.init(contentsOf: imageFileURL as URL) {
                 cell.featureImageView.image = UIImage(data: imageData)
             }
@@ -103,7 +102,7 @@ class DiscoverTableViewController: UITableViewController {
             
             fetchRecordsImageOperation.perRecordCompletionBlock = { (record, recordID, error) -> Void in
                 if let error = error {
-                    print("Failed to get restaurant image: \(error.localizedDescription)")
+//                    print("Failed to get restaurant image: \(error.localizedDescription)")
                     return
                 }
                 
@@ -129,34 +128,8 @@ class DiscoverTableViewController: UITableViewController {
         
         return cell
     }
-    
-    // MARK: - Helper Function
-    /*func fetchRecordsFromCloud() {
-     
-     // Fetching data using Convenience API
-     let cloudContainer = CKContainer.default()
-     let publicDatabase = cloudContainer.publicCloudDatabase
-     let predicate = NSPredicate(value: true)
-     let query = CKQuery(recordType: "Restaurant", predicate: predicate)
-     
-     // Convenience API
-     publicDatabase.perform(query, inZoneWith: nil) { (result, error) in
-     
-     if let error = error {
-     print("Error in fetching data from Cloud: \(error)")
-     return
-     }
-     
-     if let results = result {
-     print("Completed the download of data from Cloud")
-     self.restaurants = results
-     DispatchQueue.main.async {
-     self.tableView.reloadData()
-     }
-     }
-     }
-     } */
-    
+
+    // MARK: - Helper function
     @objc func fetchRecordsFromCloud() {
         
         // Remove existing records before refreshing
@@ -184,10 +157,10 @@ class DiscoverTableViewController: UITableViewController {
         
         queryOperation.queryCompletionBlock = {(cursor, error) -> Void in
             if let error = error {
-                print("Failed to get data from iCloud : \(error.localizedDescription)")
+//                print("Failed to get data from iCloud : \(error.localizedDescription)")
                 return
             }
-            print("Successfully retreived data from iCloud")
+//            print("Successfully retreived data from iCloud")
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
                 self.tableView.reloadData()

@@ -60,7 +60,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                     restaurants = fetchedObjects
                 }
             } catch {
-                print("Error in fetching data from core data : \(error)")
+//                print("Error in fetching data from core data : \(error)")
             }
         }
         

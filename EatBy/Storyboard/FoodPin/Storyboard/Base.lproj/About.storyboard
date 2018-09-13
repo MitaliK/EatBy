@@ -21,14 +21,14 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodpin-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-ag-Xl7">
-                                    <rect key="frame" x="116.5" y="33.5" width="142" height="53"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eatby-logo" translatesAutoresizingMaskIntoConstraints="NO" id="sIV-ag-Xl7">
+                                    <rect key="frame" x="137.5" y="10" width="100" height="100"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="sIV-ag-Xl7" firstAttribute="centerY" secondItem="2Te-39-ASt" secondAttribute="centerY" id="U7I-BB-M5S"/>
-                                <constraint firstItem="sIV-ag-Xl7" firstAttribute="centerX" secondItem="2Te-39-ASt" secondAttribute="centerX" id="eYb-3T-xAH"/>
+                                <constraint firstItem="sIV-ag-Xl7" firstAttribute="centerX" secondItem="2Te-39-ASt" secondAttribute="centerX" id="2Ky-RG-qlf"/>
+                                <constraint firstItem="sIV-ag-Xl7" firstAttribute="centerY" secondItem="2Te-39-ASt" secondAttribute="centerY" id="QFq-iV-hwo"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -81,6 +81,6 @@
     </scenes>
     <resources>
         <image name="about" width="23" height="21"/>
-        <image name="foodpin-logo" width="142" height="53"/>
+        <image name="eatby-logo" width="100" height="100"/>
     </resources>
 </document>

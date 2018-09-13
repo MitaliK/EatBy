@@ -28,7 +28,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         geoCoder.geocodeAddressString(restaurant.location ?? "") { (placeMarks, error) in
             
             if let error = error {
-                print(error.localizedDescription)
+//                print(error.localizedDescription)
                 return
             }
             

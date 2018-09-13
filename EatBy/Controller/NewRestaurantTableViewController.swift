@@ -149,12 +149,6 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
             return
         }
         
-        print("Name: \(nameTextField.text ?? "")")
-        print("Type: \(typeTextField.text ?? "")")
-        print("Location: \(addressTextField.text ?? "")")
-        print("Phone: \(phoneTextField.text ?? "")")
-        print("Description: \(descriptionTextView.text ?? "")")
-        
         // MARK: - Save restaurant information in Core Data
         if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
             restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
