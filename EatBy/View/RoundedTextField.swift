@@ -17,17 +17,17 @@ class RoundedTextField: UITextField {
     
     // returns rectange for text field's text
     override func textRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
+        return UIEdgeInsetsInsetRect(bounds, padding)
     }
 
     // returns rectange for text field's placeholders text
     override func placeholderRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
+         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     
     // returns rectange for editable text
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
-        return bounds.inset(by: padding)
+         return UIEdgeInsetsInsetRect(bounds, padding)
     }
     
     // MARK: - Making round corners

@@ -61,7 +61,7 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
         navigationController?.navigationBar.shadowImage = UIImage()
         
         if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedStringKey.font: customFont]
         }
     }
     
@@ -110,10 +110,10 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
     }
     
     // MARK: - UIImagePicker Controller Delegate
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         // When the method is called, the system passes you an info dictionary object that contains the selected image. UIImagePickerControllerOriginalImage is the key of the image selected by the user.”
         
-        if let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             photoImageView.image = selectedImage
             photoImageView.contentMode = .scaleAspectFill
             photoImageView.clipsToBounds = true
@@ -160,7 +160,7 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
             restaurant.isVisited = false
             
             if let restaurantImage = photoImageView.image {
-                restaurant.image = restaurantImage.pngData()
+                restaurant.image = UIImagePNGRepresentation(restaurantImage)
             }
             print("Saving data to Core data....")
             appDelegate.saveContext()
@@ -181,6 +181,7 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
         record.setValue(restaurant.summary, forKey: "description")
         
         let imageData = restaurant.image! as Data
+        
         // Resize the image
         let originalImage = UIImage(data: imageData)!
         let scalingFactor = (originalImage.size.width > 1024) ? 1024 / originalImage.size.width : 1.0
@@ -189,7 +190,7 @@ class NewRestaurantTableViewController: UITableViewController, UITextFieldDelega
         // Write the image into local file for temp use
         let imageFilePath = NSTemporaryDirectory() + restaurant.name!
         let imageFileURL = URL(fileURLWithPath: imageFilePath)
-        try? scaledImage.jpegData(compressionQuality: 0.8)?.write(to: imageFileURL)
+        try? UIImageJPEGRepresentation(scaledImage, 0.8)?.write(to: imageFileURL)
         
         // Create image asset for upload
         let imageAsset = CKAsset(fileURL: imageFileURL)

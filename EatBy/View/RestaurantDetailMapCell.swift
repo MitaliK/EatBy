@@ -33,7 +33,7 @@ class RestaurantDetailMapCell: UITableViewCell {
         let geoCoder = CLGeocoder()
         
         geoCoder.geocodeAddressString(location) { (placemarks, error) in
-            if let error = error {
+            if error != nil {
 //                print(error.localizedDescription)
                 return
             }
@@ -51,7 +51,7 @@ class RestaurantDetailMapCell: UITableViewCell {
                     self.mapView.addAnnotation(annotation)
                     
                     // Set the zoom level
-                    let region = MKCoordinateRegion(center: annotation.coordinate, latitudinalMeters: 250, longitudinalMeters: 250)
+                    let region = MKCoordinateRegionMakeWithDistance(annotation.coordinate, 250, 250)
                     self.mapView.setRegion(region, animated: false)
                 }
             }

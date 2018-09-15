@@ -14,9 +14,9 @@ class DiscoverTableViewController: UITableViewController {
     // MARK: - Properties
     var restaurants: [CKRecord] = []
     var spinner = UIActivityIndicatorView()
-    
     // Cache
-    private var imageCache = NSCache<CKRecord.ID, NSURL>()
+    // This imageCache is designed for caching NSURL objects using CKRecordID as a key
+    private var imageCache = NSCache<CKRecordID, NSURL>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class DiscoverTableViewController: UITableViewController {
         // largeTitleTextAttributes: used to customize navigation bars large title text
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             // NSAttributedStringKey is renamed to NSAttributedString.Key
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedStringKey.font: customFont]
         }
         
         // Adding spinner
@@ -56,7 +56,7 @@ class DiscoverTableViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.white
         refreshControl?.tintColor = UIColor.gray
-        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControl.Event.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControlEvents.valueChanged)
     }
     
     // MARK: - Table view data source
@@ -96,13 +96,14 @@ class DiscoverTableViewController: UITableViewController {
         } else {
             // Fetch Image from Cloud in background
             let publicDatabase = CKContainer.default().publicCloudDatabase
+            // To fetch the image of a specific restaurant record, we create a CKFetchRecordsOperation object with the ID of that particular restaurant record.
             let fetchRecordsImageOperation = CKFetchRecordsOperation(recordIDs: [restaurant.recordID])
             fetchRecordsImageOperation.desiredKeys = ["image"]
             fetchRecordsImageOperation.queuePriority = .veryHigh
             
+            // The operation object executes this block once for each record ID in the recordIDs property. Each time the block is executed, it is executed serially with respect to the other progress blocks of the operation.
             fetchRecordsImageOperation.perRecordCompletionBlock = { (record, recordID, error) -> Void in
-                if let error = error {
-//                    print("Failed to get restaurant image: \(error.localizedDescription)")
+                if error != nil  {
                     return
                 }
                 
@@ -115,6 +116,7 @@ class DiscoverTableViewController: UITableViewController {
                         // Replace the placeholder image with the restaurant image
                         DispatchQueue.main.async {
                             cell.featureImageView.image = UIImage(data: imageData)
+                            cell.setNeedsLayout()
                         }
                         
                         // Add the image URL to cache
@@ -147,20 +149,25 @@ class DiscoverTableViewController: UITableViewController {
         query.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
         // Create query operation with the query
+        // Operational API
         let queryOperation = CKQueryOperation(query: query)
+        // Fields to fetch
         queryOperation.desiredKeys = ["name", "type", "location", "phone", "description" ]
+        // Execution priority of the operation
         queryOperation.queuePriority = .veryHigh
+        // Max number of records at one time
         queryOperation.resultsLimit = 50
         queryOperation.recordFetchedBlock = {(record) -> Void in
+            // Executed every time the record is returned
             self.restaurants.append(record)
         }
         
+        // Executes after all the records are fetched
+        // Cursor: Indicates if there are more results remaining to fetch
         queryOperation.queryCompletionBlock = {(cursor, error) -> Void in
-            if let error = error {
-//                print("Failed to get data from iCloud : \(error.localizedDescription)")
+            if error != nil {
                 return
             }
-//            print("Successfully retreived data from iCloud")
             DispatchQueue.main.async {
                 self.spinner.stopAnimating()
                 self.tableView.reloadData()

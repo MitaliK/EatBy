@@ -27,7 +27,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         // Convert String address to coordinates
         geoCoder.geocodeAddressString(restaurant.location ?? "") { (placeMarks, error) in
             
-            if let error = error {
+            if error != nil  {
 //                print(error.localizedDescription)
                 return
             }
