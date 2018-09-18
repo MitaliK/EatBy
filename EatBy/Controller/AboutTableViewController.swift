@@ -31,7 +31,7 @@ class AboutTableViewController: UITableViewController {
         // largeTitleTextAttributes: used to customize navigation bars large title text
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             // NSAttributedStringKey is renamed to NSAttributedString.Key
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedStringKey.font: customFont]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
         
         // Remove extra separators

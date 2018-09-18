@@ -12,7 +12,7 @@ import UIKit
 extension UINavigationController {
     
     // Controls which VC to use to determine the status bar style
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return topViewController
     }
 }

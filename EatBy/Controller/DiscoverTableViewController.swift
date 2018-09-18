@@ -16,7 +16,7 @@ class DiscoverTableViewController: UITableViewController {
     var spinner = UIActivityIndicatorView()
     // Cache
     // This imageCache is designed for caching NSURL objects using CKRecordID as a key
-    private var imageCache = NSCache<CKRecordID, NSURL>()
+    private var imageCache = NSCache<CKRecord.ID, NSURL>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +34,11 @@ class DiscoverTableViewController: UITableViewController {
         // largeTitleTextAttributes: used to customize navigation bars large title text
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             // NSAttributedStringKey is renamed to NSAttributedString.Key
-            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedStringKey.font: customFont]
+            navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
         
         // Adding spinner
-        spinner.activityIndicatorViewStyle = .gray
+        spinner.style = .gray
         spinner.hidesWhenStopped = true
         view.addSubview(spinner)
         
@@ -56,7 +56,7 @@ class DiscoverTableViewController: UITableViewController {
         refreshControl = UIRefreshControl()
         refreshControl?.backgroundColor = UIColor.white
         refreshControl?.tintColor = UIColor.gray
-        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControlEvents.valueChanged)
+        refreshControl?.addTarget(self, action: #selector(fetchRecordsFromCloud), for: UIControl.Event.valueChanged)
     }
     
     // MARK: - Table view data source
